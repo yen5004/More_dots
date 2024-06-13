@@ -3,6 +3,7 @@ Dot file fun
 
 From:
 https://techguides.yt/guides/linux-server/must-know-bashrc-customizations/
+https://www.youtube.com/watch?v=sruXWoWzuuQ
 
 Must know bashrc customizations
 October 31, 2023 by Roman
