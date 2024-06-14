@@ -97,6 +97,7 @@ function extract {
     done
 }
 
+EOF
 )
 
 # Append the aliases to .bashrc
