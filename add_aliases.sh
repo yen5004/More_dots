@@ -11,9 +11,9 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 
 # CD and ls
-alias cdls="cd .. && ls"
-alias cdla="cd .. && ls -la"
-alias cdlh="cd .. && ls -lh"
+alias up='cd .. && ls -la'
+alias ups='cd .. && ls -ls'
+alias uph='cd .. && ls -lh'
 
 # 4. More ls aliases
 # Convenient shorthand for listing files, showing hidden files, and listing files in descending order of modification together with human readable file size.
