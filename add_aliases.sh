@@ -132,6 +132,11 @@ cdh() { # cd && ls -lh with a function passed
     cd "$1" && ls -lh
 }
 
+# Used when using a ntfy server
+ntfy(){
+curl -d "$1" notify.addy/room
+}
+
 EOF
 )
 
