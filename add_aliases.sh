@@ -32,9 +32,9 @@ alias cpv='rsync -avh --info=progress2'
 alias bashrc="nano ~/.bashrc"
 alias update="sudo -- sh -c 'sudo apt-get update -y; apt-get upgrade -y; apt-get dist-upgrade -y; apt-get autoremove -y; apt-get autoclean -y'"
 alias certupdate="sudo certbot certonly --manual -d *.website.com -d website.com --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory"
-alias count="ls * | wc -l"
-alias suno="sudo nano"
-alias n="nano"
+alias count='ls * | wc -l'
+alias suno='sudo nano'
+alias n='nano'
 alias c='clear'
 
 # Find string in files
@@ -43,7 +43,7 @@ fstr() {
 }
 
 # Sudo last command
-s() { # do sudo, or sudo the last command if no argument given
+s() { # do sudo, or sudo the last command if no argument is given
     if [[ $# == 0 ]]; then
         sudo $(history -p '!!')
     else
@@ -97,13 +97,45 @@ function extract {
     done
 }
 
+# Grep function example: grepa test (word to search for)
+grepa() { # ls -la | grep with a function passed
+    ls -la |grep "$1"
+}
+
+# Grep function example: greps test (word to search for)
+greps() { # ls -ls | grep with a function passed
+    ls -ls |grep "$1"
+}
+
+# Grep function example: greph test (word to search for)
+greph() { # ls -la | grep with a function passed
+    ls -lh |grep "$1"
+}
+
+# cd to a folder passed as a function and ls -la
+cda() { # cd && ls -la with a function passed
+    cd "$1" && ls -la
+}
+
+# cd to a folder passed as a function and ls -ls
+cds() { # cd && ls -ls with a function passed
+    cd "$1" && ls -ls
+}
+
+# cd to a folder passed as a function and ls -lh
+cdh() { # cd && ls -lh with a function passed
+    cd "$1" && ls -lh
+}
+
 EOF
 )
 
-# Append the aliases to .bashrc
-echo "$aliases" >> ~/.bashrc
+# Append the aliases to .bashrc & resource .bashrc to apply changes
+# echo "$aliases" >> ~/.bashrc
+# source ~/.bashrc
+# echo "Aliases added and .bashrc sourced successfully."
 
-# Source the .bashrc to apply changes
-source ~/.bashrc
-
+# Append the aliases to .zshrc & resource .zshrc to apply changes
+echo "$aliases" >> ~/.zshrc # for kali machines
+source ~/.zshrc # for kali machines
 echo "Aliases added and .bashrc sourced successfully."
