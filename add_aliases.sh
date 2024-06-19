@@ -34,6 +34,7 @@ alias cpv='rsync -avh --info=progress2'
 
 # More aliases
 alias bashrc="nano ~/.bashrc"
+alias zshrc="nano ~/.zshrc"
 alias update="sudo -- sh -c 'sudo apt-get update -y; apt-get upgrade -y; apt-get dist-upgrade -y; apt-get autoremove -y; apt-get autoclean -y'"
 alias certupdate="sudo certbot certonly --manual -d *.website.com -d website.com --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory"
 alias count='ls * | wc -l'
@@ -142,4 +143,4 @@ EOF
 # Append the aliases to .zshrc & resource .zshrc to apply changes
 echo "$aliases" >> ~/.zshrc # for kali machines
 source ~/.zshrc # for kali machines
-echo "Aliases added and .bashrc sourced successfully."
+echo "Aliases added and .zshrc sourced successfully."
