@@ -4,6 +4,10 @@
 # define the aliases to be added
 aliases=$(cat << 'EOF'
 
+####### Addition of custom scripts #######
+####### Addition of custom scripts #######
+####### Addition of custom scripts #######
+
 # Change dirs
 alias ..="cd .."
 alias cd..="cd .."
@@ -15,7 +19,7 @@ alias up='cd .. && ls -la'
 alias ups='cd .. && ls -ls'
 alias uph='cd .. && ls -lh'
 
-# 4. More ls aliases
+# More ls aliases
 # Convenient shorthand for listing files, showing hidden files, and listing files in descending order of modification together with human readable file size.
 alias ll='ls -l'
 alias la='ls -Al'
