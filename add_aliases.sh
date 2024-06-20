@@ -137,6 +137,9 @@ ntfy(){
 curl -d "$1" notify.addy/room
 }
 
+alias cheatdir='cd ~/.config/cheat/cheatsheets/personal'
+alias cheat_help='cd ~/.config/cheat/cheatsheets/personal'
+
 EOF
 )
 
